@@ -329,7 +329,6 @@ table th {
 .pagination .page-item {
   margin: 0 5px;
 }
-
 .pagination .page-link, .pagination .page-item1 {
   display: block;
   padding: 8px 12px;
@@ -339,7 +338,6 @@ table th {
   color: #007bff;
   cursor: pointer;
 }
-
 .pagination .page-link:hover, .pagination .page-item1:hover {
   background-color: #007bff;
   color: white;
