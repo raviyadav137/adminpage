@@ -3,6 +3,7 @@ import {Link,useNavigate} from 'react-router-dom';
 
 function Register(){
     const history=useNavigate();
+  
     const [data,setData]=useState({name:"",email:"",password:"",Repassword:""})
     const  changeHandle=(e)=>{
         setData({...data,[e.target.name]:e.target.value})
@@ -14,6 +15,7 @@ function Register(){
           if(password===Repassword){
                 alert("user registered")
                 localStorage.setItem("user",JSON.stringify(data));
+                
                 history('/login');
                
             }else{
@@ -23,7 +25,8 @@ function Register(){
       }
     return(
         <>
-        <center><h1 className="register_heading">Register Page</h1></center>
+     
+   
          <form>
             <div className="formcontainer">
            <div className="inputfiled">
@@ -51,4 +54,5 @@ function Register(){
         </>
     )
 }
+
 export default Register;
