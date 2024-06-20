@@ -18,7 +18,7 @@ function Dashboard() {
       </div>
       <div className="main-content">
         <h2>Welcome to the Dashboard</h2>
-        <p>Here you can manage users and products.</p>
+        
               </div>
     </div>
   );

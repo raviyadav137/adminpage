@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 
 import ProductCard from './components/ProductCard'
 import ProductDetail from './components/ProductDetail';
+import UserCard from './components/UserCard';
 
 
 function App(){
@@ -26,7 +27,7 @@ function App(){
   <Route path="/product" element={<Protected Component={ProductCard}/>}/>
   <Route path="/product/:id" element={<ProductDetail />} />
   
-
+<Route path="/users" element={<UserCard/>}/>
    </Routes> 
    </Users>
    

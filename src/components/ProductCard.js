@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate,Link } from "react-router-dom";
 
+
 function ProductCard() {
   const [records, setRecords] = useState([]);
   const [value, setValue] = useState("");
@@ -11,7 +12,7 @@ function ProductCard() {
   const lastIndex = currentPage * dataPerPage;
   const firstIndex = lastIndex - dataPerPage;
   const data = records.slice(firstIndex, lastIndex);
-
+  console.log(data);
   const npage = Math.ceil(records.length / dataPerPage);
   const numbers = [...Array(npage + 1).keys()].slice(1);
 
@@ -24,6 +25,7 @@ function ProductCard() {
       })
       .catch((err) => console.log(err));
   }, []);
+
 
   const changeHandle = (e) => {
     setValue(e.target.value);
@@ -111,7 +113,7 @@ function ProductCard() {
               <th>Image</th>
               <th>Availability</th>
               <th>Price</th>
-              <th>Review</th>
+              <th>Rating</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -122,13 +124,13 @@ function ProductCard() {
                 <td>
                   <img
                     className="img_size"
-                    src={item.images[0]} // Access the first image in the array
+                    src={item.images[0]} 
                     alt="Product"
                   />
                 </td>
                 <td>{item.availabilityStatus}</td>
                 <td>{item.price}</td>
-                <td>{item.review}</td>
+                <td>{item.rating}</td>
                 <td>
                   <button onClick={(e) => {e.stopPropagation(); handleDelete(item.id);}}>Delete</button>
                 </td>

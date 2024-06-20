@@ -5,6 +5,7 @@ function ProductDetail() {
   const location = useLocation();
   const { item, records } = location.state;
   const [searchValue, setSearchValue] = useState("");
+  const [toogle,setToogle]=useState(false)
   const navigate = useNavigate();
 
   const handleAddToCart = () => {
@@ -72,10 +73,17 @@ function ProductDetail() {
           src={item.images[0]} 
           alt="Product"
         />
+        <p>{item.description}</p>
         <p>Availability: {item.availabilityStatus}</p>
+        <p>{item.rating}</p>
         <p>Price: {item.price}</p>
-        <p>Review: {item.review}</p>
-        <button className="btn-add-to-cart" onClick={handleAddToCart}>
+        <button onClick={()=>setToogle(!toogle)}>Show Reviews{ toogle ? item.reviews.map((i,id)=>(
+          <div className="review_section" key={id}>
+            <p>Reviewer Name : {i.reviewerName}</p><hr/>
+            <p>Reviewer Email : {i.reviewerEmail}</p>
+            <p>comment : {i.comment}</p> 
+          </div>)) : ""}</button><br></br>
+                <button className="btn-add-to-cart" onClick={handleAddToCart}>
           Add to Cart
         </button>
       </div>

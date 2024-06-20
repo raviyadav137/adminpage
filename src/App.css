@@ -19,38 +19,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.login_box{
-  text-transform: uppercase;
-  background-color: rgb(11 45 11 / 40%);
-  height: 80px;
-  width: 100%;
-  text-align: center;
- 
-  text-wrap: wrap;
-  margin:0px 0px 30px 0px;
-}
-.formcontainer{
-  width: 600px;
-  margin: auto;
-      background-color: aliceblue;
-  align-items: center;
-  margin-top: 44px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-}
-.inputbox{
-  width:400px;
-  height:25px;
-}
-.formbtn{
-  background-color: orange;
-  width:70px;
-  height:38px;
-  border-radius: 5px;
-
-}
 .anchor{
   color:red;
   text-decoration: underline;
@@ -109,19 +77,14 @@ body {
   background-color: #00000091;
   color: white;
   text-align: center;
-  
-}
-/*.Navbar_items{
-  display: flex;
-  background-color: #f4f0e2a8;
-  width: 100%;
-  height: 80px;
-}*/
-/* Navbar.css */
-/* css for Dashboard */
+  }
+
 .dashboard {
   display: flex;
   height: 100vh;
+  background-image: url("https://cdn.prod.website-files.com/65cda65f0af1fe67dc20dfeb/65f3f9e3530a3f107a954af7_page%207%20What%20Are%20the%20Functions%20of%20Inventory%20Management%20Software.png");
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
 .sidebar {
@@ -206,7 +169,7 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
- 
+ z-index: 1;
 }
 
 .dropdown_bar li {
@@ -253,7 +216,7 @@ body {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px 0 0 4px;
-  outline: none;
+  
 }
 
 .search_bar button {
@@ -278,7 +241,7 @@ body {
   border: 1px solid #ddd;
   border-top: none;
   background-color: white;
-  z-index: 1000;
+  
   border-radius: 0 0 4px 4px;
 }
 
@@ -348,8 +311,104 @@ table th {
   color: white;
   border-color: #007bff;
 }
+/* css for usercard */
+h1 {
+  text-align: center;
+  color: #4caf50;
+}
 
-/* Modal Styles */
+form {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+form h2 {
+  margin-top: 0;
+  color: #4caf50;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: auto;
+}
+
+button[type="submit"]:hover {
+  background-color: #577458;
+
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.userCard_list li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li span {
+  flex: 1;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button.logout_button {
+  background-color: #f44336;
+}
+
+button.logout_button:hover {
+  background-color: #e53935;
+}
+
+
+/* css for Product css */
 .modal {
   display: flex;
   justify-content: center;
@@ -431,7 +490,7 @@ table th {
 }
 
 .btn-add-to-cart:hover {
-  background-color: #218838;
+  background-color: #657569;
 }
 
 .product-info {
@@ -441,3 +500,10 @@ table th {
   border-radius: 4px;
   margin-top: 20px;
 }
+.review_section{
+  width: 289px;
+  height: 180px;
+  background-color: #887821d9;
+  margin-bottom: 10px;
+}
+
